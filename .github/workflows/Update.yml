@@ -27,7 +27,7 @@ jobs:
     - name: Get Cache Commit Hash
       id: cacheHash
       run: |
-        cacheHash=$(curl -skL https://api.github.com/repos/hubbylei/edgetunnel/releases/latest | jq -r .name)
+        cacheHash=$(curl -skL https://api.github.com/repos/cf-dl/edgetunnel/releases/latest | jq -r .name)
         echo "commitHash=${cacheHash}" >> "$GITHUB_OUTPUT"
 
     - name: Compare Commit Hash
